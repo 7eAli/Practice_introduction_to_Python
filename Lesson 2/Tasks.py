@@ -64,5 +64,19 @@ def Task_3():
         numbers[i] = (-3) ** i
     print(numbers)
 
-Task_3()
-# Task_4()
+# Task_3()
+
+
+# Найдите все числа до 10000, у который
+# количество делителей равно 10.
+def Task_4():
+    count = 0
+    for i in range(1, 10001):
+        for j in range(1, i + 1):
+            if i % j == 0:
+                count += 1
+        if count == 10:
+            print(i)
+        count = 0
+
+Task_4()
