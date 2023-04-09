@@ -75,8 +75,8 @@ def Task_4():
         for j in range(1, i + 1):
             if i % j == 0:
                 count += 1
-        if count == 10:
-            print(i)
-        count = 0
+        if count == 10:            
+            print(f"{i}\t", end=' ')
+        count = 0        
 
 Task_4()
