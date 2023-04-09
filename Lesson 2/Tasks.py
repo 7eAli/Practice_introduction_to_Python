@@ -50,6 +50,19 @@ def Task_2():
     print(count)
 
 
-Task_2()
-# Task_3()
+# Task_2()
+
+
+# Дано число N. Заполните список длиной N
+# элементами 1, -3, 9, -27, 81, -243...
+
+def Task_3():
+    number = int(
+                input("Введите число N: "))
+    numbers = [1] * (number + 1)
+    for i in range(0, len(numbers)):        
+        numbers[i] = (-3) ** i
+    print(numbers)
+
+Task_3()
 # Task_4()
