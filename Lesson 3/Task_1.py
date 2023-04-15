@@ -13,7 +13,7 @@ sum_second_half = 0
 
 for day in range(1, 16):
     sum_first_half += rain[day]
-    sum_second_half += rain[day + 14]
+    sum_second_half += rain[int(len(rain)) - day]
 if sum_first_half > sum_second_half:
     print("В первой половине месяца выпало больше осадков")
 else:
