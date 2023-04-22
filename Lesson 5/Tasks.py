@@ -11,14 +11,26 @@ def Task_0():
                             lambda x: x % 5 == 0, numbers))
     print(numbers)
 
+# Задача 1. На вход подаётся четырёхзначное число. 
+# Получите список, состоящий из цифр данного числа, увеличенных на 10.
+def Task_1():
+    number = input("Введите четырехзначное число: ")
+    if len(number) != 4:
+        print("Вы ввели неправильное число")
+    else:
+        digits = list(
+                        map(
+                            lambda x: int(x) + 10, number))
+        print(digits)
+
 flag = True
 while flag:
     print()
     choice = input("Введите номер задания или нажмите q для выхода: ")
     if choice == "0":
         Task_0()
-    # elif choice == "1":
-    #     Task_1()
+    elif choice == "1":
+        Task_1()
     # elif choice == "2":
     #     Task_2()
     # elif choice == "3":
