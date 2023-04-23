@@ -102,7 +102,20 @@ def Task_3():
     elif '/' in expression:
         result = numbers[0] / numbers[1]
     print(result)
-    
+
+# Задача 4. Имеется 1000 рублей. Бык стоит – 100
+# рублей, корова – 50 рублей, телёнок – 5 рублей.
+# Сколько быков, коров и телят можно купить на все
+# эти деньги, если всего надо купить 100 голов
+# скота?
+def Task_4():
+    sum_money = int(input())    
+    sum_catle = int(input())
+    for x in range(sum_money // 100):
+        for y in range(sum_money // 100): 
+            z = sum_catle - (x + y)           
+            if (100 * x + 50 * y + 5 * z == sum_money and x + y + z == sum_catle):
+                 print(f"Быков - {x}, Коров - {y}, Телят - {z}")
             
 
 flag = True
