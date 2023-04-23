@@ -68,8 +68,42 @@ def Task_2():
     print(num_1_dig)
     print(num_2_dig)
     Check_Numbers(num_1_dig, num_2_dig)
-    
 
+# Задача 3. Напишите программу вычисления арифметического
+# выражения заданного строкой. Используйте операции +,-,/,*.
+# приоритет операций стандартный.
+# а) Решите задачу для одного действия;
+# б) Дополнительное задание. Решите задачу для нескольких
+# действий;
+# в) Решите задачу средствами python.    
+def Task_3():
+    expression = input("Введите арифметическое выражение: ")
+    digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]    
+    result = 0
+    numbers = []    
+    temp = ''
+    for i in range(len(expression)):
+        if expression[i] in digits:
+            temp += expression[i]
+            if i == len(expression) - 1:
+                temp = int(temp)
+                numbers.append(temp)
+                temp = ''
+            elif expression[i + 1] not in digits:
+                temp = int(temp)
+                numbers.append(temp)
+                temp = ''
+    if '+' in expression:
+        result = numbers[0] + numbers[1]
+    elif '-' in expression:
+        result = numbers[0] - numbers[1]
+    elif '*' in expression:
+        result = numbers[0] * numbers[1]
+    elif '/' in expression:
+        result = numbers[0] / numbers[1]
+    print(result)
+    
+            
 
 flag = True
 while flag:
