@@ -1,9 +1,7 @@
-data = open("text.txt")
-print(data)
-print(type(data))
+data = open("text.txt", mode='w', encoding='utf-8')
 
+data.write('Новая запись\n')
+
+rows = data.readlines()
 data.close()
-print(data)
-
-while True:
-    x = 1
+print(rows)
